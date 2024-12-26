@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      
+
       <h1>Redux Toolkit Enhanced Counter</h1>
       <h2>Count: {count}</h2>
       <h2>Double Count (Derived State): {doubleCount}</h2>
@@ -38,15 +38,8 @@ const App = () => {
       </button>
 
       <div style={{ marginTop: '20px' }}>
-        <input
-          type="number"
-          value={amount}
-          onChange={handleInputChange}
-          placeholder="Enter amount"
-        />
         <button
           onClick={() => dispatch(addByAmount(amount))}
-          style={{ marginLeft: '10px' }}
         >
           Add by Amount
         </button>
@@ -57,6 +50,13 @@ const App = () => {
         >
           {status === 'loading' ? 'Loading...' : 'Async Increment'}
         </button>
+        <input
+          style={{ marginLeft: '10px' }}
+          type="number"
+          value={amount}
+          onChange={handleInputChange}
+          placeholder="Enter amount"
+        />
       </div>
     </div>
   );
